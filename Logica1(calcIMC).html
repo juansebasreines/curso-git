@@ -1,0 +1,60 @@
+
+<meta charset="utf-8">
+
+<h1>Programa IMC</h1>
+
+<script type="text/javascript">
+
+//-----------------------------------------
+	// Funcion para imprimir 
+
+	function imprimir(frase){
+
+		document.write(frase);
+		document.write("<br>")
+	}
+
+//-----------------------------------------
+	// Funcion para saltos de linea 
+
+	function saltosLinea(saltos=1){
+
+		for (var i = 0; i < saltos; i++) {
+			document.write("<br>");	
+		}
+		
+	}
+
+//-----------------------------------------
+	//Calculadora de IMC 
+
+	function calcIMC(altura, peso, nombre){
+
+		return imc = peso/(altura^2);
+	}
+
+//-----------------------------------------
+	// Calculo del imc
+
+	nombre = prompt("inserte su nombre")	
+	peso = prompt(nombre + " inserta tu peso")
+	altura = prompt(nombre + " inserta tu altura")
+ 	imc = calcIMC(altura,peso,nombre)
+	imprimir("El IMC de "+ nombre + " es "+ imc );
+
+// -----------------------------------------
+	// Mejora con Logica 2
+
+	saltosLinea()
+
+	if (imc < 18.5){
+		imprimir("Está abajo de lo recomendado");
+	} else if(imc > 18.5 && imc < 25){
+		imprimir("Tiene un buen peso")
+	} else {
+		imprimir("tiene sobrepeso")
+	}
+
+
+
+</script>
